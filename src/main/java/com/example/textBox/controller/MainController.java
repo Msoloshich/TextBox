@@ -31,7 +31,6 @@ public class MainController {
         if(filter != null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);
         } else {
-
             messages = messageRepo.findAll();
         }
 
