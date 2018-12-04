@@ -25,8 +25,7 @@ public class Message {
 
 
 
-    public Message(){
-
+    public Message() {
     }
 
     public Message(String text, String tag, User user) {
@@ -36,31 +35,7 @@ public class Message {
     }
 
     public String getAuthorName() {
-        return author != null ? author.getUsername() : "none";
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
+        return author != null ? author.getUsername() : "<none>";
     }
 
     public User getAuthor() {
@@ -71,6 +46,30 @@ public class Message {
         this.author = author;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
     public String getFilename() {
         return filename;
     }
@@ -78,6 +77,8 @@ public class Message {
     public void setFilename(String filename) {
         this.filename = filename;
     }
+
+
 
 
 }
