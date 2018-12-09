@@ -1,6 +1,9 @@
 <#import "parts/common.ftl" as c>
+<#import "parts/pager.ftl" as p>
+
 
 <@c.page>
+
 <#if !isCurrentUser>
     <#if isSubscriber>
         <a class="btn btn-info" href="/user/unsubscribe/${userChannel.id}">Unsubscribe</a>

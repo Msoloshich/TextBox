@@ -1,12 +1,15 @@
 package com.example.textBox.repos;
 
 import com.example.textBox.domain.Message;
+import com.example.textBox.domain.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.List;
 
 public interface MessageRepo extends CrudRepository<Message, Long> {
 
-    List<Message> findByTag(String tag);
+    Page<Message> findByAuthor(User user, Pageable pageable);
+    Page<Message> findAll(Pageable pageable);
+    Page<Message> findByTag(String tag, Pageable pageable);
 
 }
